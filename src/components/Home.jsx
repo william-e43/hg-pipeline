@@ -1,9 +1,8 @@
 import React from "react";
-import Q1 from "./Q1.jsx";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  // BrowserRouter as Router,
+  // Switch,
+  // Route,
   Link
 } from "react-router-dom";
 
