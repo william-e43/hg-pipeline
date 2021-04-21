@@ -9,6 +9,7 @@ let QualExpnc = (props) => {
   return(
     <div>
       <h2>QualForExpnc</h2>
+      <button> <Link to="/">Return to Home</Link> </button>
     </div>
   )
 }
@@ -17,14 +18,7 @@ let DNQualExpnc = (props) => {
   return (
     <div>
       <h2>DNQualForExpnc</h2>
-    </div>
-  )
-}
-
-let Q4Warning = (props) => {
-  return(
-    <div>
-      <h2>Q4Warning</h2>
+      <button> <Link to="/">Return to Home</Link> </button>
     </div>
   )
 }
@@ -35,4 +29,6 @@ let Q4Warning = (props) => {
 
 
 
-export {QualExpnc, DNQualExpnc, Q4Warning};
+
+
+export {QualExpnc, DNQualExpnc};
