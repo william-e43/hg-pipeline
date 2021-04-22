@@ -44,9 +44,12 @@ let Q1 =(props) => {
   const [a1, seta1] = useState();
   const [a2, seta2] = useState();
 
-  let pathString = 'q2';
+  let pathString = '/q2';
   if (a1) {
-    pathString = 'qual-expnc';
+    pathString = {
+      pathname: '/qual-expnc',
+      state: {from: '/q1'}
+    };
   }
 
   const onYes = () => {
@@ -90,7 +93,7 @@ let Q1 =(props) => {
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
       <StyledLink to='/'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -102,9 +105,12 @@ let Q2 = (props) => {
   const [a1, seta1] = useState();
   const [a2, seta2] = useState();
 
-  let pathString = 'q3';
+  let pathString = '/q2-branch';
   if (a1) {
-    pathString = 'qual-expnc';
+    pathString = {
+      pathname: '/qual-expnc',
+      state: {from: '/q2'}
+    };
   }
 
   const onYes = () => {
@@ -133,7 +139,7 @@ let Q2 = (props) => {
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
       <StyledLink to='/q1'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -149,7 +155,10 @@ let Q3 = (props) => {
 
   let pathString = 'q4';
   if (a1) {
-    pathString = 'dnqual-expnc';
+    pathString = {
+      pathname: '/dnqual-expnc',
+      state: {from: '/q3'}
+    };
   }
 
   const onYes = () => {
@@ -181,7 +190,7 @@ let Q3 = (props) => {
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
       <StyledLink to='/q2'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -295,7 +304,10 @@ let Q7 = (props) => {
   const [a1, seta1] = useState();
   const [a2, seta2] = useState();
 
-  let pathString = 'dnqual-expnc';
+  let pathString = {
+    pathname: '/dnqual-expnc',
+    state: {from: '/q7'}
+  };
   if (a1) {
     pathString = 'q7-branch'; //Go to green pipeline
   }
@@ -317,11 +329,10 @@ let Q7 = (props) => {
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
       <StyledLink to='/q6'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
-
 
 
 

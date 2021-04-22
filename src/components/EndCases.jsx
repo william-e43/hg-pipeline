@@ -26,7 +26,8 @@ const StyledLink = styled(Link)`
 const QualExpnc = (props) => {
   return(
     <div>
-      <h2>QualForExpnc</h2>
+      <h2>Congratulations you qualify for an expunction.</h2>
+      <StyledLink to={props.location.state.from}><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
   )
@@ -35,7 +36,8 @@ const QualExpnc = (props) => {
 const DNQualExpnc = (props) => {
   return (
     <div>
-      <h2>DNQualForExpnc</h2>
+      <h2>You do not qualify for an expunction.</h2>
+      <StyledLink to={props.location.state.from}><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
   )

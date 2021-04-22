@@ -19,6 +19,16 @@ const StyledLink = styled(Link)`
   color: inherit;
 `
 
+const Q2Branch = (props) => {
+  return(
+    <div>
+      <h2>You do not qualify for an expunction, keep going to see if you qualify for a non-disclosure</h2>
+      <StyledLink to="/q2"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/q3"><SubmitButton>Next</SubmitButton></StyledLink>
+    </div>
+  );
+}
+
 const Q4Branch = (props) => {
   return(
     <div>
@@ -145,4 +155,4 @@ const Q7Branch = (props) => {
   )
 }
 
-export {Q4Branch, Q5Branch, Q6Branch, Q7Branch};
+export {Q2Branch, Q4Branch, Q5Branch, Q6Branch, Q7Branch};
