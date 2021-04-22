@@ -89,8 +89,8 @@ let Q1 =(props) => {
       </ul>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -132,8 +132,8 @@ let Q2 = (props) => {
       </ul>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q1'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q1'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -180,8 +180,8 @@ let Q3 = (props) => {
       </ul>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q2'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q2'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -214,8 +214,8 @@ let Q4 = (props) => {
       <h2>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h2>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q3'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q3'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -248,8 +248,8 @@ let Q5 = (props) => {
       <h2>Was you case disposed of with the successful completion of a deferred adjudication?</h2>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q4'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q4'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -282,8 +282,8 @@ let Q6 = (props) => {
       <h2>Was your case disposed of with the successful completion of probation?</h2>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q5'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q5'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -316,8 +316,8 @@ let Q7 = (props) => {
       <h2>Was your case disposed of by the completion of time in jail?</h2>
       <Button state={a1} onClick={() => onYes()}>Yes</Button>
       <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
-      <SubmitButton><StyledLink to='/q6'>Prev</StyledLink></SubmitButton>
-      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
+      <StyledLink to='/q6'><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={`/${pathString}`}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }

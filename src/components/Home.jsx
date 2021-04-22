@@ -2,7 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-function Home(props) {
+const SubmitButton = styled.button`
+  height: 37.5px;
+  width: 73.5px;
+  background: white;
+  border-radius: 12px;
+  border: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px 0 #d4d7dc;
+  margin: 20px;
+  outline: none;
+`
+const StyledLink = styled(Link)`
+  text-decoration: inherit;
+  color: inherit;
+`
+
+const Home = (props) => {
   return(
     <div>
       <h1>Record Clearing Qualifier</h1>
@@ -19,7 +36,7 @@ function Home(props) {
             <li><span>Discharge paperwork: This will be paperwork attesting to how your case ended. It could be a dismissal, an email from the court if the case was rejected, a discharge from probation, or release from jail/prison.</span></li>
           </ol>
           <h2>Step 2: Take the qualifier</h2>
-            <Link to="/q1">Take the Qualifier</Link>
+            <StyledLink to="/q1"><SubmitButton>Start</SubmitButton></StyledLink>
         </div>
     </div>
   )

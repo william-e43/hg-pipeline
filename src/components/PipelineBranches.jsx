@@ -1,12 +1,31 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import styled from "styled-components";
+
+const SubmitButton = styled.button`
+  height: 37.5px;
+  width: 73.5px;
+  background: white;
+  border-radius: 12px;
+  border: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px 0 #d4d7dc;
+  margin: 20px;
+  outline: none;
+`
+const StyledLink = styled(Link)`
+  text-decoration: inherit;
+  color: inherit;
+`
 
 const Q4Branch = (props) => {
   return(
     <div>
       <h1>Q4 Warning Branch</h1>
       <p>“Keep going but there may be a problem if you received another conviction or deferred adjudication during any applicable wait period that followed the completion of your sentence.  As you move through each question, take note of the wait periods and this question.  If you received another conviction or deferred adjudication during that wait period then you will know you do not qualify for a non-disclosure and can stop the qualifier ”</p>
-      <button><Link to="/q5">Continue</Link></button>
+      <StyledLink to="/q4"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -39,6 +58,7 @@ const Q5Branch = (props) => {
             </ul></li>
         </ul></li>
       </ul>
+      <StyledLink to="/q5"><SubmitButton>Back</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -82,6 +102,7 @@ const Q6Branch = (props) => {
           </ul>
         </li>
       </ul>
+      <StyledLink to="/q6"><SubmitButton>Back</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -119,6 +140,7 @@ const Q7Branch = (props) => {
           </ul>
         </li>
       </ul>
+      <StyledLink to="/q7"><SubmitButton>Back</SubmitButton></StyledLink>
     </div>
   )
 }

@@ -1,24 +1,42 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import styled from "styled-components";
 /*
   This file holds all the components for the pipeline end cases (and some edge case scenarios)
   (i.e. when the user either qualifies or is disqualified one of these components is rendered)
 */
 
-let QualExpnc = (props) => {
+const SubmitButton = styled.button`
+  height: 37.5px;
+  width: 73.5px;
+  background: white;
+  border-radius: 12px;
+  border: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px 0 #d4d7dc;
+  margin: 20px;
+  outline: none;
+`
+const StyledLink = styled(Link)`
+  text-decoration: inherit;
+  color: inherit;
+`
+
+const QualExpnc = (props) => {
   return(
     <div>
       <h2>QualForExpnc</h2>
-      <button> <Link to="/">Return to Home</Link> </button>
+      <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
   )
 }
 
-let DNQualExpnc = (props) => {
+const DNQualExpnc = (props) => {
   return (
     <div>
       <h2>DNQualForExpnc</h2>
-      <button> <Link to="/">Return to Home</Link> </button>
+      <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
   )
 }
