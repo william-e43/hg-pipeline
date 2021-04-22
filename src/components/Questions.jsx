@@ -31,9 +31,14 @@ let Q1 =(props) => {
     pathString = 'qual-expnc';
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
@@ -41,9 +46,11 @@ let Q1 =(props) => {
       <h1>Question 1</h1>
       <h2>Were you charged/ticketed as a minor for any of the following?</h2>
       {/* put the following buttons in a grid */}
-      <Button onClick={() => toggle()}>True</Button>
-      <Button onClick={() => toggle()}>False</Button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -60,9 +67,14 @@ let Q2 = (props) => {
     pathString = 'qual-expnc';
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
@@ -78,9 +90,11 @@ let Q2 = (props) => {
         <li>Case dismissed for terms</li>
         <li>Case rejected in the interests of justice</li>
       </ul>
-      <button onClick={() => toggle()}>True</button>
-      <button onClick={() => toggle()}>False</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -99,9 +113,14 @@ let Q3 = (props) => {
     pathString = 'dnqual-expnc';
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
@@ -120,9 +139,11 @@ let Q3 = (props) => {
         <li>Violation of a court or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking, or trafficking</li>
         <li>Repeated violation of a court order or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking or trafficking</li>
       </ul>
-      <button onClick={() => toggle()}>True</button>
-      <button onClick={() => toggle()}>False</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -139,17 +160,25 @@ let Q4 = (props) => {
     pathString = 'q4-branch';
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
   }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
+  }
+
   return(
     <div>
       <h1>Question 4</h1>
       <h2>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h2>
-      <button onClick={() => toggle()}>True</button>
-      <button onClick={() => toggle()}>False</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -166,18 +195,25 @@ let Q5 = (props) => {
     pathString = 'q5-branch';  //Go to red pipeline
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
     <div>
       <h1>Question 5</h1>
       <h2>Was you case disposed of with the successful completion of a deferred adjudication?</h2>
-      <button onClick={() => toggle()}>Yes</button>
-      <button onClick={() => toggle()}>No</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -194,18 +230,25 @@ let Q6 = (props) => {
     pathString = 'q6-branch'; //Go to blue pipeline
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
     <div>
       <h1>Question 6</h1>
       <h2>Was your case disposed of with the successful completion of probation?</h2>
-      <button onClick={() => toggle()}>Yes</button>
-      <button onClick={() => toggle()}>No</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
@@ -222,18 +265,25 @@ let Q7 = (props) => {
     pathString = 'q7-branch'; //Go to green pipeline
   }
 
-  const toggle = () => {
-    seta1(!a1);
-    seta2(!a2);
+  const onYes = () => {
+    seta1(true);
+    seta2(false);
+  }
+
+  const onNo = () =>{
+    seta1(false);
+    seta2(true);
   }
 
   return(
     <div>
       <h1>Question 7</h1>
       <h2>Was your case disposed of by the completion of time in jail?</h2>
-      <button onClick={() => toggle()}>Yes</button>
-      <button onClick={() => toggle()}>No</button><br></br>
+      <Button onClick={() => onYes()}>Yes</Button>
+      <Button onClick={() => onNo()}>No</Button><br></br>
       <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
+      <div>Answer Yes: {a1.toString()}</div>
+      <div>Answer No: {a2.toString()}</div>
     </div>
   )
 }
