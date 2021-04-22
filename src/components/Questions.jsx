@@ -15,6 +15,24 @@ const Button = styled.button`
   box-shadow: 0 2px 10px 0 #d4d7dc;
   margin: 20px;
   outline: none;
+  background: ${props => props.state ? "#bcd1f6" : "white"}
+`
+
+const SubmitButton = styled.button`
+  height: 37.5px;
+  width: 73.5px;
+  background: white;
+  border-radius: 12px;
+  border: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px 0 #d4d7dc;
+  margin: 20px;
+  outline: none;
+`
+const StyledLink = styled(Link)`
+  text-decoration: inherit;
+  color: inherit;
 `
 
 let Q1 =(props) => {
@@ -23,8 +41,8 @@ let Q1 =(props) => {
       •Q2    */
   //this is an example of the logic to choose where to route after the user submits their answers
   //the pathString is used in the later <Link> component
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q2';
   if (a1) {
@@ -45,12 +63,34 @@ let Q1 =(props) => {
     <div>
       <h1>Question 1</h1>
       <h2>Were you charged/ticketed as a minor for any of the following?</h2>
-      {/* put the following buttons in a grid */}
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <ul>
+        <li>One or more convictions for possession, purchase, consumption, or receipt of cigarettes or tobacco products.</li><br></br>
+        <li>No more than one conviction of:
+          <ul>
+            <li>Purchase or attempt to purchase alcohol by a minor</li>
+            <li>Possession of alcohol by a minor</li>
+            <li>Consumption of alcohol by a minor</li>
+            <li>Misrepresentation of age</li>
+            <li>Driving or operating a watercraft under the influence of alcohol</li>
+          </ul>
+        </li><br></br>
+        <li>No more than one conviction of:
+          <ul>
+          <li>Any fine-only misdemeanor (other than traffic) not covered by one of the above</li>
+          <li>Violations of a penal ordinance of a political subdivision</li>
+          </ul>
+        </li><br></br>
+        <li>Case dismissed through:
+          <ul>
+          <li>Teen Court</li>
+          <li>Class C misdemeanor ending in successful completion of deferred adjudication</li>
+          </ul>
+        </li>
+      </ul>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -59,8 +99,8 @@ let Q2 = (props) => {
   /*this question needs a path to:
     •True case expnc
     •False Case & beginning of Non Disclosure Pipeline    */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q3';
   if (a1) {
@@ -90,11 +130,10 @@ let Q2 = (props) => {
         <li>Case dismissed for terms</li>
         <li>Case rejected in the interests of justice</li>
       </ul>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q1'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -105,8 +144,8 @@ let Q3 = (props) => {
   /*this question needs a path to:
     •False case
     •Q4    */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q4';
   if (a1) {
@@ -139,11 +178,10 @@ let Q3 = (props) => {
         <li>Violation of a court or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking, or trafficking</li>
         <li>Repeated violation of a court order or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking or trafficking</li>
       </ul>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q2'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -152,8 +190,8 @@ let Q4 = (props) => {
   /*this question needs a path to:
     •Q5 With warning
     •Q5    */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q5';
   if (a1) {
@@ -174,11 +212,10 @@ let Q4 = (props) => {
     <div>
       <h1>Question 4</h1>
       <h2>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h2>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q3'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -187,8 +224,8 @@ let Q5 = (props) => {
   /*this question needs a path to:
     •Red pipeline
     •Q6    */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q6';
   if (a1) {
@@ -209,11 +246,10 @@ let Q5 = (props) => {
     <div>
       <h1>Question 5</h1>
       <h2>Was you case disposed of with the successful completion of a deferred adjudication?</h2>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q4'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -222,8 +258,8 @@ let Q6 = (props) => {
   /*this question needs a path to:
     •Blue pipeline
     •Q7    */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'q7';
   if (a1) {
@@ -244,11 +280,10 @@ let Q6 = (props) => {
     <div>
       <h1>Question 6</h1>
       <h2>Was your case disposed of with the successful completion of probation?</h2>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q5'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
@@ -257,8 +292,8 @@ let Q6 = (props) => {
 let Q7 = (props) => {
   /*this question needs a path to:
     •Green pipeline   */
-  const [a1, seta1] = useState(true);
-  const [a2, seta2] = useState(false);
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
 
   let pathString = 'dnqual-expnc';
   if (a1) {
@@ -279,11 +314,10 @@ let Q7 = (props) => {
     <div>
       <h1>Question 7</h1>
       <h2>Was your case disposed of by the completion of time in jail?</h2>
-      <Button onClick={() => onYes()}>Yes</Button>
-      <Button onClick={() => onNo()}>No</Button><br></br>
-      <button><Link to={`/${pathString}`}>Submit Answer</Link></button>
-      <div>Answer Yes: {a1.toString()}</div>
-      <div>Answer No: {a2.toString()}</div>
+      <Button state={a1} onClick={() => onYes()}>Yes</Button>
+      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <SubmitButton><StyledLink to='/q6'>Prev</StyledLink></SubmitButton>
+      <SubmitButton><StyledLink to={`/${pathString}`}>Submit</StyledLink></SubmitButton>
     </div>
   )
 }
