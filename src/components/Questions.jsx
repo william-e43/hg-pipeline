@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 //import {QualExpnc, DNQualExpnc, Q4Warning} from "./EndCases.jsx"
 
+const ButtonWrapper = styled.span`
+`
 const Button = styled.button`
   height: 112.5px;
   width: 120px;
@@ -15,9 +17,11 @@ const Button = styled.button`
   box-shadow: 0 2px 10px 0 #d4d7dc;
   margin: 20px;
   outline: none;
-  background: ${props => props.state ? "#bcd1f6" : "white"}
+  background: ${props => props.state ? "#bcd1f6" : "white"};
+  ${ButtonWrapper}:hover & {
+    background: ${props => props.test ? "e6ffe6" : "ffd6cc"}
+  }
 `
-
 const SubmitButton = styled.button`
   height: 37.5px;
   width: 73.5px;
@@ -34,6 +38,8 @@ const StyledLink = styled(Link)`
   text-decoration: inherit;
   color: inherit;
 `
+
+//trying to get hover for answer buttons to work!
 
 let Q1 =(props) => {
   /*this question needs a path to:
@@ -90,8 +96,8 @@ let Q1 =(props) => {
           </ul>
         </li>
       </ul>
-      <Button state={a1} onClick={() => onYes()}>Yes</Button>
-      <Button state={a2} onClick={() => onNo()}>No</Button><br></br>
+      <ButtonWrapper><Button state={a1} test={true} onClick={() => onYes()}>Yes</Button></ButtonWrapper>
+      <ButtonWrapper><Button state={a2} test={false} onClick={() => onNo()}>No</Button><br></br></ButtonWrapper>
       <StyledLink to='/'><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>

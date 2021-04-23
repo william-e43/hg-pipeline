@@ -43,12 +43,4 @@ const DNQualExpnc = (props) => {
   )
 }
 
-
-
-
-
-
-
-
-
 export {QualExpnc, DNQualExpnc};

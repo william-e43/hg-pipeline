@@ -1,7 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 const SubmitButton = styled.button`
   height: 37.5px;
   width: 73.5px;
@@ -13,10 +17,27 @@ const SubmitButton = styled.button`
   box-shadow: 0 2px 10px 0 #d4d7dc;
   margin: 20px;
   outline: none;
+  ${ButtonWrapper}:hover & {
+    background-color: green;
+  }
 `
 const StyledLink = styled(Link)`
   text-decoration: inherit;
   color: inherit;
+`
+const Button = styled.button`
+  height: 150px;
+  width: 160px;
+  border-radius: 12px;
+  border: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  transition-property: box-shadow;
+  transition-duration: 180ms;
+  box-shadow: 0 2px 10px 0 #d4d7dc;
+  margin: 20px;
+  outline: none;
+  background: ${props => props.state ? "#bcd1f6" : "white"};
 `
 
 const Q2Branch = (props) => {
@@ -34,7 +55,7 @@ const Q4Branch = (props) => {
     <div>
       <h1>Q4 Warning Branch</h1>
       <p>“Keep going but there may be a problem if you received another conviction or deferred adjudication during any applicable wait period that followed the completion of your sentence.  As you move through each question, take note of the wait periods and this question.  If you received another conviction or deferred adjudication during that wait period then you will know you do not qualify for a non-disclosure and can stop the qualifier ”</p>
-      <StyledLink to="/q4"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/q4"><ButtonWrapper><SubmitButton>Back</SubmitButton></ButtonWrapper></StyledLink>
       <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
@@ -44,7 +65,13 @@ const Q5Branch = (props) => {
   return(
     <div>
       <h1>Red Pipeline</h1>
-      <h2>There are three ways you might qualify for a non-disclosure. These, and their wait times, are included below :</h2>
+      <h2>Choose the option that applies to you:</h2>
+      <ButtonWrapper>
+        <Button>My case involved driving or boating while intoxicated</Button>
+        <Button>My case was a misdemeanor and I was discharged after September 1, 2017</Button>
+        <Button>My case was a felony</Button><br></br>
+      </ButtonWrapper>
+      {/* <h2>There are three ways you might qualify for a non-disclosure. These, and their wait times, are included below :</h2>
       <ul>
         <li>If your case involved driving or boating while intoxicated then you may be eligible so long as:<ul>
           <li>You have no prior convictions or deferred adjudications</li>
@@ -67,7 +94,7 @@ const Q5Branch = (props) => {
             <li>Immediately if the above does not apply</li>
             </ul></li>
         </ul></li>
-      </ul>
+      </ul> */}
       <StyledLink to="/q5"><SubmitButton>Back</SubmitButton></StyledLink>
     </div>
   )
