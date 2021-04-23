@@ -216,14 +216,36 @@ const Q6Branch = (props) => {
 }
 
 const Q7Branch = (props) => {
+
+  const [path, setPath] = useState('/q6');
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
+
+  const onClick = (expr) => {
+    switch (expr) {
+      case 'ans1':
+        seta1(true);
+        seta2(false);
+        setPath('/q7-qual1');
+        break;
+      case 'ans2':
+        seta1(false);
+        seta2(true);
+        setPath('/q7-qual2');
+        break;
+      default:
+        alert('Please choose a valid input');
+    }
+  }
+
   return(
     <div>
       <h1>Green Pipeline</h1>
       <h1>There are two ways you might qualify for a non-disclosure.</h1>
       <h2>Choose the option that applies to you</h2>
       <ButtonWrapper>
-        <Button>My case involved misdemeanor driving while intoxicated</Button>
-        <Button>My case was a misdemeanor other than a DWI</Button>
+        <Button state={a1} onClick={() => onClick('ans1')}>My case involved misdemeanor driving while intoxicated</Button>
+        <Button state={a2} onClick={() => onClick('ans2')}>My case was a misdemeanor other than a DWI</Button>
       </ButtonWrapper>
       {/* <ul>
         <li>
@@ -254,7 +276,7 @@ const Q7Branch = (props) => {
         </li>
       </ul> */}
       <StyledLink to="/q7"><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }

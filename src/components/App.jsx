@@ -1,6 +1,6 @@
 import React from "react";
 import {Q1, Q2, Q3, Q4, Q5, Q6, Q7} from "./Questions.jsx";
-import {QualExpnc, DNQualExpnc, DNQualND, Q5Qual1, Q5Qual2, Q5Qual3, Q6Qual1, Q6Qual2, Q6Qual3} from "./EndCases.jsx";
+import {QualExpnc, DNQualExpnc, DNQualND, Q5Qual1, Q5Qual2, Q5Qual3, Q6Qual1, Q6Qual2, Q6Qual3, Q7Qual1, Q7Qual2} from "./EndCases.jsx";
 import {Q2Branch, Q4Branch, Q5Branch, Q6Branch, Q7Branch} from "./PipelineBranches.jsx";
 import Home from "./Home.jsx";
 import { Switch, Route} from "react-router-dom";
@@ -43,6 +43,8 @@ class App extends React.Component {
           <Route exact path="/q6-qual2"> <Q6Qual2 /> </Route>
           <Route exact path="/q6-qual3"> <Q6Qual3 /> </Route>
           <Route exact path="/q7-branch"> <Q7Branch /> </Route>
+          <Route exact path="/q7-qual1"> <Q7Qual1 /> </Route>
+          <Route exact path="/q7-qual2"> <Q7Qual2 /> </Route>
         </Switch>
       </Main>
     );
