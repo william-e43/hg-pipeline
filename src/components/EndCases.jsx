@@ -43,4 +43,62 @@ const DNQualExpnc = (props) => {
   )
 }
 
-export {QualExpnc, DNQualExpnc};
+const DNQualND = (props) => {
+  return (
+    <div>
+      <h2>You do not qualify for an expunction or non-disclosure</h2>
+      <StyledLink to={props.location.state.from}><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
+    </div>
+  )
+}
+
+const Q5Qual1 = (props) => {
+  return(
+    <div>
+      <h2>Q5 Qual 1</h2>
+    </div>
+  )
+}
+
+const Q5Qual2 = (props) => {
+  return(
+    <div>
+      <h2>Q5 Qual 2</h2>
+    </div>
+  )
+}
+
+const Q5Qual3 = (props) => {
+  return(
+    <div>
+      <h2>Q5 Qual 3</h2>
+    </div>
+  )
+}
+
+const Q6Qual1 = (props) => {
+  return(
+    <div>
+      <h2>Q6 Qual 1</h2>
+    </div>
+  )
+}
+
+const Q6Qual2 = (props) => {
+  return(
+    <div>
+      <h2>Q6 Qual 2</h2>
+    </div>
+  )
+}
+
+const Q6Qual3 = (props) => {
+  return(
+    <div>
+      <h2>Q6 Qual 3</h2>
+    </div>
+  )
+}
+
+export {QualExpnc, DNQualExpnc, DNQualND, Q5Qual1, Q5Qual2, Q5Qual3, Q6Qual1, Q6Qual2, Q6Qual3};

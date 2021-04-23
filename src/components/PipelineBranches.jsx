@@ -37,7 +37,7 @@ const Button = styled.button`
   box-shadow: 0 2px 10px 0 #d4d7dc;
   margin: 20px;
   outline: none;
-  background: ${props => props.state ? "#bcd1f6" : "white"};
+  background: ${props => props.state ? "#d2e0f9" : "white"};
 `
 
 const Q2Branch = (props) => {
@@ -63,7 +63,7 @@ const Q4Branch = (props) => {
 
 const Q5Branch = (props) => {
 
-  let pathString = '/';
+  const [path, setPath] = useState('/q5');
   const [a1, seta1] = useState();
   const [a2, seta2] = useState();
   const [a3, seta3] = useState();
@@ -74,20 +74,19 @@ const Q5Branch = (props) => {
         seta1(true);
         seta2(false);
         seta3(false);
-        pathString = '/q5branch-a1';
-        console.log(pathString);
+        setPath('/q5-qual1');
         break;
       case 'ans2':
         seta1(false);
         seta2(true);
         seta3(false);
-        pathString = '/q5branch-a2';
+        setPath('/q5-qual2');
         break;
       case 'ans3':
         seta1(false);
         seta2(false);
         seta3(true);
-        pathString = '/q5branch-a3';
+        setPath('/q5-qual3');
         break;
       default:
         alert('Please choose a valid input');
@@ -129,14 +128,14 @@ const Q5Branch = (props) => {
         </ul></li>
       </ul> */}
       <StyledLink to="/q5"><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
 
 const Q6Branch = (props) => {
 
-  let pathString = "/";
+  const [path, setPath] = useState('/q6');
   const [a1, seta1] = useState();
   const [a2, seta2] = useState();
   const [a3, seta3] = useState();
@@ -147,20 +146,19 @@ const Q6Branch = (props) => {
         seta1(true);
         seta2(false);
         seta3(false);
-        pathString = '/q6branch-a1';
-        console.log(pathString);
+        setPath('/q6-qual1');
         break;
       case 'ans2':
         seta1(false);
         seta2(true);
         seta3(false);
-        pathString = '/q6branch-a2';
+        setPath('/q6-qual2');
         break;
       case 'ans3':
         seta1(false);
         seta2(false);
         seta3(true);
-        pathString = '/q6branch-a3';
+        setPath('/q6-qual3');
         break;
       default:
         alert('Please choose a valid input');
@@ -212,7 +210,7 @@ const Q6Branch = (props) => {
         </li>
       </ul> */}
       <StyledLink to="/q6"><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
+      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
