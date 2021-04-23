@@ -101,7 +101,7 @@ const Q5Branch = (props) => {
       <ButtonWrapper>
         <Button state={a1} onClick={() => onClick('ans1')}>My case involved driving or boating while intoxicated</Button>
         <Button state={a2} onClick={() => onClick('ans2')}>My case was a misdemeanor and I was discharged after September 1, 2017</Button>
-        <Button state={a3} onClick={() => onClick('ans3')}>My case was a felony</Button><br></br>
+        <Button state={a3} onClick={() => onClick('ans3')}><div>Other or</div>My case was a felony</Button><br></br>
       </ButtonWrapper>
       {/* <h2>There are three ways you might qualify for a non-disclosure. These, and their wait times, are included below :</h2>
       <ul>
@@ -173,7 +173,7 @@ const Q6Branch = (props) => {
       <ButtonWrapper>
         <Button state={a1} onClick={() => onClick('ans1')}>My case involved misdemeanor driving while intoxicated</Button>
         <Button state={a2} onClick={() => onClick('ans2')}>My case was a misdemeanor other than a DWI</Button>
-        <Button state={a3} onClick={() => onClick('ans3')}>I was/am a human trafficking victim</Button>
+        <Button state={a3} onClick={() => onClick('ans3')}>I was a human trafficking victim</Button>
       </ButtonWrapper>
       {/* <ul>
         <li>If your case involved misdemeanor driving while intoxicated then you may be eligible so long as:
