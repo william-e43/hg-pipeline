@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import styled from "styled-components";
 
@@ -62,14 +62,47 @@ const Q4Branch = (props) => {
 }
 
 const Q5Branch = (props) => {
+
+  let pathString = '/';
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
+  const [a3, seta3] = useState();
+
+  const onClick = (expr) => {
+    switch (expr) {
+      case 'ans1':
+        seta1(true);
+        seta2(false);
+        seta3(false);
+        pathString = '/q5branch-a1';
+        console.log(pathString);
+        break;
+      case 'ans2':
+        seta1(false);
+        seta2(true);
+        seta3(false);
+        pathString = '/q5branch-a2';
+        break;
+      case 'ans3':
+        seta1(false);
+        seta2(false);
+        seta3(true);
+        pathString = '/q5branch-a3';
+        break;
+      default:
+        alert('Please choose a valid input');
+    }
+  }
+
   return(
     <div>
       <h1>Red Pipeline</h1>
-      <h2>Choose the option that applies to you:</h2>
+      <h1>There are three ways you might qualify for a non-disclosure.</h1>
+      <h2>Choose the option that applies to you</h2>
       <ButtonWrapper>
-        <Button>My case involved driving or boating while intoxicated</Button>
-        <Button>My case was a misdemeanor and I was discharged after September 1, 2017</Button>
-        <Button>My case was a felony</Button><br></br>
+        <Button state={a1} onClick={() => onClick('ans1')}>My case involved driving or boating while intoxicated</Button>
+        <Button state={a2} onClick={() => onClick('ans2')}>My case was a misdemeanor and I was discharged after September 1, 2017</Button>
+        <Button state={a3} onClick={() => onClick('ans3')}>My case was a felony</Button><br></br>
       </ButtonWrapper>
       {/* <h2>There are three ways you might qualify for a non-disclosure. These, and their wait times, are included below :</h2>
       <ul>
@@ -96,16 +129,55 @@ const Q5Branch = (props) => {
         </ul></li>
       </ul> */}
       <StyledLink to="/q5"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
 
 const Q6Branch = (props) => {
+
+  let pathString = "/";
+  const [a1, seta1] = useState();
+  const [a2, seta2] = useState();
+  const [a3, seta3] = useState();
+
+  const onClick = (expr) => {
+    switch (expr) {
+      case 'ans1':
+        seta1(true);
+        seta2(false);
+        seta3(false);
+        pathString = '/q6branch-a1';
+        console.log(pathString);
+        break;
+      case 'ans2':
+        seta1(false);
+        seta2(true);
+        seta3(false);
+        pathString = '/q6branch-a2';
+        break;
+      case 'ans3':
+        seta1(false);
+        seta2(false);
+        seta3(true);
+        pathString = '/q6branch-a3';
+        break;
+      default:
+        alert('Please choose a valid input');
+    }
+  }
+
   return(
     <div>
       <h1>Blue Pipeline</h1>
-      <h2>There are three ways you might qualify for a non-disclosure.  These, and their wait times, are included below:</h2>
-      <ul>
+      <h1>There are three ways you might qualify for a non-disclosure.</h1>
+      <h2>Choose the option that applies to you</h2>
+      <ButtonWrapper>
+        <Button state={a1} onClick={() => onClick('ans1')}>My case involved misdemeanor driving while intoxicated</Button>
+        <Button state={a2} onClick={() => onClick('ans2')}>My case was a misdemeanor other than a DWI</Button>
+        <Button state={a3} onClick={() => onClick('ans3')}>I was/am a human trafficking victim</Button>
+      </ButtonWrapper>
+      {/* <ul>
         <li>If your case involved misdemeanor driving while intoxicated then you may be eligible so long as:
           <ul>
             <li>You have no prior convictions or deferred adjudications</li>
@@ -138,8 +210,9 @@ const Q6Branch = (props) => {
             <li>Committed the offense solely as a victim of trafficking of persons</li>
           </ul>
         </li>
-      </ul>
+      </ul> */}
       <StyledLink to="/q6"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }
@@ -148,8 +221,13 @@ const Q7Branch = (props) => {
   return(
     <div>
       <h1>Green Pipeline</h1>
-      <h2>There are two ways you might qualify for a non-disclosure. These, and their wait times, are included below:</h2>
-      <ul>
+      <h1>There are two ways you might qualify for a non-disclosure.</h1>
+      <h2>Choose the option that applies to you</h2>
+      <ButtonWrapper>
+        <Button>My case involved misdemeanor driving while intoxicated</Button>
+        <Button>My case was a misdemeanor other than a DWI</Button>
+      </ButtonWrapper>
+      {/* <ul>
         <li>
           <ul>If your case involved misdemeanor driving while intoxicated then you may be eligible so long as:
             <li>You have no prior convictions or deferred adjudications</li>
@@ -176,8 +254,9 @@ const Q7Branch = (props) => {
             </li>
           </ul>
         </li>
-      </ul>
+      </ul> */}
       <StyledLink to="/q7"><SubmitButton>Back</SubmitButton></StyledLink>
+      <StyledLink to="/q5"><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
   )
 }

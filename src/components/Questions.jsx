@@ -39,8 +39,6 @@ const StyledLink = styled(Link)`
   color: inherit;
 `
 
-//trying to get hover for answer buttons to work!
-
 let Q1 =(props) => {
   /*this question needs a path to:
       •True case expnc
@@ -58,15 +56,31 @@ let Q1 =(props) => {
     };
   }
 
-  const onYes = () => {
-    seta1(true);
-    seta2(false);
+  const onClick = (expr) => {
+    console.log('pathString before: ', pathString);
+    switch(expr) {
+      case 'yes':
+        seta1(true);
+        seta2(false);
+        break;
+      case 'no':
+        seta1(false);
+        seta2(true);
+        break;
+      default:
+        alert('Choose a valid option');
+    }
   }
 
-  const onNo = () =>{
-    seta1(false);
-    seta2(true);
-  }
+  // const onYes = () => {
+  //   seta1(true);
+  //   seta2(false);
+  // }
+
+  // const onNo = () =>{
+  //   seta1(false);
+  //   seta2(true);
+  // }
 
   return(
     <div>
@@ -96,8 +110,8 @@ let Q1 =(props) => {
           </ul>
         </li>
       </ul>
-      <ButtonWrapper><Button state={a1} test={true} onClick={() => onYes()}>Yes</Button></ButtonWrapper>
-      <ButtonWrapper><Button state={a2} test={false} onClick={() => onNo()}>No</Button><br></br></ButtonWrapper>
+      <ButtonWrapper><Button state={a1} onClick={() => onClick('yes')}>Yes</Button></ButtonWrapper>
+      <ButtonWrapper><Button state={a2} onClick={() => onClick('no')}>No</Button><br></br></ButtonWrapper>
       <StyledLink to='/'><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to={pathString}><SubmitButton>Next</SubmitButton></StyledLink>
     </div>
@@ -303,7 +317,7 @@ let Q6 = (props) => {
   )
 }
 
-
+// UPDATE FALSE CASE PATHSTRING
 let Q7 = (props) => {
   /*this question needs a path to:
     •Green pipeline   */
