@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
+
 /*
   This file holds all the components for the pipeline end cases (and some edge case scenarios)
   (i.e. when the user either qualifies or is disqualified one of these components is rendered)
@@ -24,9 +25,27 @@ const StyledLink = styled(Link)`
 `
 
 const QualExpnc = (props) => {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = "https://form.jotform.com/211156086536152";
+    script.type = "text/javascript";
+    script.async = true;
+
+    const node = document.getElementById("qual-expnc-form");
+
+    node.appendChild(script);
+
+    return () => {
+      node.removeChild(script);
+    }
+  });
+
   return(
     <div>
       <h2>Congratulations you qualify for an expunction.</h2>
+      <div id="qual-expnc-form"></div>
       <StyledLink to={props.location.state.from}><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
@@ -169,6 +188,10 @@ const Q7Qual1 = (props) => {
   return(
     <div>
       <h2>Q7 Qual 1</h2>
+      <h3>Your case involved misdemeanor driving while intoxicated so you may be eligible for a non-disclosure so long as</h3>
+      <ul>
+
+      </ul>
       <StyledLink to="/q7-branch"><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
     </div>
