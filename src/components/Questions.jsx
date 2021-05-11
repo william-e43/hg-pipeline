@@ -1,6 +1,5 @@
 import React from 'react';
-import YNQuestion from './YNQuestion.jsx';
-// import {SubmitButton, StyledLink, Button, ButtonWrapper} from '../style';
+import {YNQuestion} from './ButtonTemplates.jsx';
 
 let Q1 =(props) => {
 
@@ -56,7 +55,6 @@ let Q2 = (props) => {
     </div>
   )
 }
-
 //Start of Non Disclousre Pipeline
 
 let Q3 = (props) => {

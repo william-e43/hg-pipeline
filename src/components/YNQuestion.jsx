@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SubmitButton, StyledLink, Button, ButtonWrapper} from '../style';
 
-const YNQuestion = ({yPath, nPath, currentPath, backPath}) => {
+const YNQuestion = ({yPath, nPath, currentPath, backPath, yButtonText, nButtonText}) => {
 
   const [path, setPath] = useState(currentPath)
   const [a1, seta1] = useState();
@@ -27,10 +27,10 @@ const YNQuestion = ({yPath, nPath, currentPath, backPath}) => {
   return (
   <div>
     <ButtonWrapper>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
+      <Button state={a1} onClick={() => onClick('yes')}>{yButtonText || 'Yes'}</Button>
     </ButtonWrapper>
     <ButtonWrapper>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button>
+      <Button state={a2} onClick={() => onClick('no')}>{nButtonText || 'No'}</Button>
     </ButtonWrapper>
     <ButtonWrapper>
       <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
