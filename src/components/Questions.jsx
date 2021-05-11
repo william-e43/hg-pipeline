@@ -1,67 +1,8 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
-import styled from "styled-components";
-//import {QualExpnc, DNQualExpnc, Q4Warning} from "./EndCases.jsx"
-
-const ButtonWrapper = styled.span`
-`
-const Button = styled.button`
-  height: 112.5px;
-  width: 120px;
-  border-radius: 12px;
-  border: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  transition-property: box-shadow;
-  transition-duration: 180ms;
-  box-shadow: 0 2px 10px 0 #d4d7dc;
-  margin: 20px;
-  outline: none;
-  background: ${props => props.state ? "#bcd1f6" : "white"};
-  ${ButtonWrapper}:hover & {
-    background: ${props => props.test ? "e6ffe6" : "ffd6cc"}
-  }
-`
-const SubmitButton = styled.button`
-  height: 37.5px;
-  width: 73.5px;
-  background: white;
-  border-radius: 12px;
-  border: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  box-shadow: 0 2px 10px 0 #d4d7dc;
-  margin: 20px;
-  outline: none;
-`
-const StyledLink = styled(Link)`
-  text-decoration: inherit;
-  color: inherit;
-`
+import React from 'react';
+import YNQuestion from './YNQuestion.jsx';
+// import {SubmitButton, StyledLink, Button, ButtonWrapper} from '../style';
 
 let Q1 =(props) => {
-
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/qual-expnc', state: {from: '/q1'}});
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q2');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
 
   return(
     <div>
@@ -91,37 +32,12 @@ let Q1 =(props) => {
           </ul>
         </li>
       </ul>
-      <ButtonWrapper><Button state={a1} onClick={() => onClick('yes')}>Yes</Button></ButtonWrapper>
-      <ButtonWrapper><Button state={a2} onClick={() => onClick('no')}>No</Button><br></br></ButtonWrapper>
-      <StyledLink to='/'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+    <YNQuestion yPath="qual-expnc" nPath="/q2" currentPath="/q1" backPath="/"/>
     </div>
   )
 }
 
 let Q2 = (props) => {
-
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/qual-expnc', state: {from: '/q2'}});
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q2-branch');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
 
   return(
     <div>
@@ -136,10 +52,7 @@ let Q2 = (props) => {
         <li>Case dismissed for terms</li>
         <li>Case rejected in the interests of justice</li>
       </ul>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q1'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="qual-expnc" nPath="/q2-branch" currentPath="/q2" backPath="/q1"/>
     </div>
   )
 }
@@ -147,27 +60,6 @@ let Q2 = (props) => {
 //Start of Non Disclousre Pipeline
 
 let Q3 = (props) => {
-
-  const [path, setPath] = useState('/q4')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/dnqual-nd', state: {from: '/q3'} });
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q4');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
 
   return(
     <div>
@@ -185,161 +77,49 @@ let Q3 = (props) => {
         <li>Violation of a court or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking, or trafficking</li>
         <li>Repeated violation of a court order or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking or trafficking</li>
       </ul>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q2'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="dnqual-nd" nPath="/q4" currentPath="/q3" backPath="/q2"/>
     </div>
   )
 }
 
 let Q4 = (props) => {
-  /*this question needs a path to:
-    •Q4 warning
-    •Q5    */
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath('/q4-branch');
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q5');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
-
   return(
     <div>
       <h1>Question 4</h1>
       <h2>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h2>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q3'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="/q4-branch" nPath="/q5" currentPath="/q4" backPath="/q3"/>
     </div>
   )
 }
 
 let Q5 = (props) => {
-  /*this question needs a path to:
-    •Red pipeline
-    •Q6    */
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/q5-branch', state: {from: '/q5'}});
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q6');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
-
   return(
     <div>
       <h1>Question 5</h1>
       <h2>Was you case disposed of with the successful completion of a deferred adjudication?</h2>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q4'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="/q5-branch" nPath="/q6" currentPath="/q5" backPath="/q4"/>
     </div>
   )
 }
 
 let Q6 = (props) => {
-  /*this question needs a path to:
-    •Blue pipeline
-    •Q7    */
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/q6-branch', state: {from: '/q6'}});
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath('/q7');
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
 
   return(
     <div>
       <h1>Question 6</h1>
       <h2>Was your case disposed of with the successful completion of probation?</h2>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q5'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="/q6-branch" nPath="/q7" currentPath="/q6" backPath="/q5"/>
     </div>
   )
 }
 
 let Q7 = (props) => {
-  /*this question needs a path to:
-    •Green pipeline   */
-  const [path, setPath] = useState('/q2')
-  const [a1, seta1] = useState();
-  const [a2, seta2] = useState();
-
-  const onClick = (expr) => {
-    console.log('pathString before: ', path);
-    switch(expr) {
-      case 'yes':
-        seta1(true);
-        seta2(false);
-        setPath({pathname: '/q7-branch', state: {from: '/q7'}});
-        break;
-      case 'no':
-        seta1(false);
-        seta2(true);
-        setPath({pathname: '/dnqual-nd', state: {from: '/q7'}});
-        break;
-      default:
-        alert('Choose a valid option');
-    }
-  }
 
   return(
     <div>
       <h1>Question 7</h1>
       <h2>Was your case disposed of by the completion of time in jail?</h2>
-      <Button state={a1} onClick={() => onClick('yes')}>Yes</Button>
-      <Button state={a2} onClick={() => onClick('no')}>No</Button><br></br>
-      <StyledLink to='/q6'><SubmitButton>Back</SubmitButton></StyledLink>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
+      <YNQuestion yPath="/q7-branch" nPath="/dnqual-nd" currentPath="/q7" backPath="/q6"/>
     </div>
   )
 }

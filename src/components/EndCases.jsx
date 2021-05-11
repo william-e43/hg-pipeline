@@ -1,46 +1,12 @@
-import React, {useEffect} from 'react';
-import {Link} from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import {SubmitButton, StyledLink} from '../style';
 
 /*
   This file holds all the components for the pipeline end cases (and some edge case scenarios)
   (i.e. when the user either qualifies or is disqualified one of these components is rendered)
 */
 
-const SubmitButton = styled.button`
-  height: 37.5px;
-  width: 73.5px;
-  background: white;
-  border-radius: 12px;
-  border: 12px;
-  font-size: 16px;
-  font-weight: 700;
-  box-shadow: 0 2px 10px 0 #d4d7dc;
-  margin: 20px;
-  outline: none;
-`
-const StyledLink = styled(Link)`
-  text-decoration: inherit;
-  color: inherit;
-`
-
 const QualExpnc = (props) => {
-
-  useEffect(() => {
-    const script = document.createElement('script');
-
-    script.src = "https://form.jotform.com/211156086536152";
-    script.type = "text/javascript";
-    script.async = true;
-
-    const node = document.getElementById("qual-expnc-form");
-
-    node.appendChild(script);
-
-    return () => {
-      node.removeChild(script);
-    }
-  });
 
   return(
     <div>
@@ -48,6 +14,7 @@ const QualExpnc = (props) => {
       <div id="qual-expnc-form"></div>
       <StyledLink to={props.location.state.from}><SubmitButton>Back</SubmitButton></StyledLink>
       <StyledLink to="/"><SubmitButton>Home</SubmitButton></StyledLink>
+      <input type="file"></input>
     </div>
   )
 }
