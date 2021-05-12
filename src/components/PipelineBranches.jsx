@@ -1,20 +1,21 @@
 import React from 'react';
-import {YNQuestion, ThreeWayQuestion} from './ButtonTemplates.jsx';
+import {YNQuestion, ThreeWayQuestion, MainNavButtons} from './ButtonTemplates.jsx';
 import {SubmitButton, StyledLink, ButtonWrapper} from '../style';
 
 const Q2Branch = (props) => {
+
+  const propsObj = {
+    backPath: props.location.state.from,
+    nextPath: '/q3'
+  }
   return(
     <div>
       <h2>You do not qualify for an expunction, keep going to see if you qualify for a non-disclosure</h2>
-      <ButtonWrapper>
-        <StyledLink to="/q2"><SubmitButton>Back</SubmitButton></StyledLink>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <StyledLink to="/q3"><SubmitButton>Next</SubmitButton></StyledLink>
-      </ButtonWrapper>
+      <MainNavButtons props={propsObj} />
     </div>
   );
 }
+
 const Q4Branch = (props) => {
   return(
     <div>
@@ -29,6 +30,7 @@ const Q4Branch = (props) => {
     </div>
   )
 }
+
 const Q5Branch = (props) => {
   const propsObj = {
     firstPath: '/q5-qual1',
@@ -73,6 +75,7 @@ const Q6Branch = (props) => {
     </div>
   )
 }
+
 const Q7Branch = (props) => {
 
   const yText = 'My case involved misdemeanor driving while intoxicated';
@@ -84,34 +87,6 @@ const Q7Branch = (props) => {
       <h1>There are two ways you might qualify for a non-disclosure.</h1>
       <h2>Choose the option that applies to you</h2>
       <YNQuestion yPath="/q7-qual1" nPath="/q7-qual2" currentPath="/q7-branch" backPath="/q7" yButtonText={yText} nButtonText={nText}/>
-      {/* <ul>
-        <li>
-          <ul>If your case involved misdemeanor driving while intoxicated then you may be eligible so long as:
-            <li>You have no prior convictions or deferred adjudications</li>
-            <li>Your BAC was not listed in the deferred judgment as being above .15</li>
-            <li>You were not involved in an accident that included another person in your car or otherwise</li>
-            <li>
-              <ul>
-                <li>Three years from your release if you were required to have an ignition interlock in your car.</li>
-                <li>Five years from your release if you were not required to have an interlock ignition device in your car</li>
-              </ul>
-            </li>
-          </ul>
-        </li><br></br>
-        <li>If your case was a misdemeanor other than a DWI, then you may be eligible so long as:
-          <ul>
-            <li>You have no prior convictions or deferred adjudications</li>
-            <li>The case you are trying to get sealed is not on the “Big Naughty List”</li>
-            <li>Offense for which order is sought was not violent or sexual in nature with the exception of an offense under penal code 22.01</li>
-            <li>Your wait period will be:
-              <ul>
-                <li>Two years from your discharge if the case was covered by any offense labeled by the penal code as 20, 21, 22, 25, 42, 43, or 46</li>
-                <li>Immediately if the above does not apply</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul> */}
     </div>
   )
 }

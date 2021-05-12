@@ -37,19 +37,19 @@ class App extends React.Component {
           <Route exact path="/qual-expnc" component={QualExpnc}></Route>
           <Route exact path="/dnqual-expnc" component={DNQualExpnc}></Route>
           <Route exact path="/dnqual-nd" component={DNQualND}></Route>
-          <Route exact path="/q2-branch"> <Q2Branch /> </Route>
-          <Route exact path="/q4-branch"> <Q4Branch /> </Route>
-          <Route exact path="/q5-branch"> <Q5Branch /> </Route>
-          <Route exact path="/q5-qual1"> <Q5Qual1 /> </Route>
-          <Route exact path="/q5-qual2"> <Q5Qual2 /> </Route>
-          <Route exact path="/q5-qual3"> <Q5Qual3 /> </Route>
-          <Route exact path="/q6-branch"> <Q6Branch /> </Route>
-          <Route exact path="/q6-qual1"> <Q6Qual1 /> </Route>
-          <Route exact path="/q6-qual2"> <Q6Qual2 /> </Route>
-          <Route exact path="/q6-qual3"> <Q6Qual3 /> </Route>
-          <Route exact path="/q7-branch"> <Q7Branch /> </Route>
-          <Route exact path="/q7-qual1"> <Q7Qual1 /> </Route>
-          <Route exact path="/q7-qual2"> <Q7Qual2 /> </Route>
+          <Route exact path="/q2-branch" component={Q2Branch}></Route>
+          <Route exact path="/q4-branch" component={Q4Branch}></Route>
+          <Route exact path="/q5-branch" component={Q5Branch}></Route>
+          <Route exact path="/q5-qual1" component={Q5Qual1}></Route>
+          <Route exact path="/q5-qual2" component={Q5Qual2}></Route>
+          <Route exact path="/q5-qual3" component={Q5Qual3}></Route>
+          <Route exact path="/q6-branch" component={Q6Branch}></Route>
+          <Route exact path="/q6-qual1" component={Q6Qual1}></Route>
+          <Route exact path="/q6-qual2" component={Q6Qual2}></Route>
+          <Route exact path="/q6-qual3" component={Q6Qual3}></Route>
+          <Route exact path="/q7-branch" component={Q7Branch}></Route>
+          <Route exact path="/q7-qual1" component={Q7Qual1}></Route>
+          <Route exact path="/q7-qual2" component={Q7Qual2}></Route>
         </Switch>
       </Main>
     );

@@ -94,3 +94,18 @@ export const ThreeWayQuestion = (props) => {
     </div>
   )
 }
+
+export const MainNavButtons = (props) => {
+  const {backPath, nextPath} = props.props;
+
+  return (
+    <div>
+      <ButtonWrapper>
+        <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <StyledLink to={nextPath || '/'}><SubmitButton>{nextPath ? 'Next' : 'Home'}</SubmitButton></StyledLink>
+      </ButtonWrapper>
+    </div>
+  )
+}
