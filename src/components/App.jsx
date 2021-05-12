@@ -10,7 +10,27 @@ const Main = styled.div`
   color: #393A3D;
   margin-left: 20px;
 `
-
+const Header = styled.div`
+  background-image: linear-gradient(180deg, rgba(255,255,255,0) 60%, #00132d 100%),
+  linear-gradient(0deg, rgba(255,255,255,0) 60%, #00132d 90%),
+  url('../media/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 500px;
+  max-height: 100%;
+  width: auto;
+`
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-rows: 40% 60%;
+`
+const Logo = styled.div`
+  background-image: url('../media/logo.png');
+  height: 80%;
+  width: 90%;
+  background-repeat: no-repeat
+`
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -19,39 +39,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <Main>
-        <Switch>
-          <Route exact path="/"> <Home /> </Route>
-          <Route exact path="/q1"> <Q1 /> </Route>
-          <Route exact path="/q2"> <Q2 /> </Route>
-          <Route exact path="/q3"> <Q3 /> </Route>
-          <Route exact path="/q4"> <Q4 /> </Route>
-          <Route exact path="/q5"> <Q5 /> </Route>
-          <Route exact path="/q6"> <Q6 /> </Route>
-          <Route exact path="/q7"> <Q7 /> </Route>
-          {/*
-          • using 'component' syntax below to allow for prop transfer b/w components during routing
-          • use for components whose nav requires props passed during routing
-          • idk why but props do not properly transfer w/out this component syntax
-          */}
-          <Route exact path="/qual-expnc" component={QualExpnc}></Route>
-          <Route exact path="/dnqual-expnc" component={DNQualExpnc}></Route>
-          <Route exact path="/dnqual-nd" component={DNQualND}></Route>
-          <Route exact path="/q2-branch" component={Q2Branch}></Route>
-          <Route exact path="/q4-branch" component={Q4Branch}></Route>
-          <Route exact path="/q5-branch" component={Q5Branch}></Route>
-          <Route exact path="/q5-qual1" component={Q5Qual1}></Route>
-          <Route exact path="/q5-qual2" component={Q5Qual2}></Route>
-          <Route exact path="/q5-qual3" component={Q5Qual3}></Route>
-          <Route exact path="/q6-branch" component={Q6Branch}></Route>
-          <Route exact path="/q6-qual1" component={Q6Qual1}></Route>
-          <Route exact path="/q6-qual2" component={Q6Qual2}></Route>
-          <Route exact path="/q6-qual3" component={Q6Qual3}></Route>
-          <Route exact path="/q7-branch" component={Q7Branch}></Route>
-          <Route exact path="/q7-qual1" component={Q7Qual1}></Route>
-          <Route exact path="/q7-qual2" component={Q7Qual2}></Route>
-        </Switch>
-      </Main>
+      <Wrapper>
+        <Header>
+          <Logo></Logo>
+        </Header>
+        <Main>
+          <Switch>
+            <Route exact path="/"> <Home /> </Route>
+            <Route exact path="/q1"> <Q1 /> </Route>
+            <Route exact path="/q2"> <Q2 /> </Route>
+            <Route exact path="/q3"> <Q3 /> </Route>
+            <Route exact path="/q4"> <Q4 /> </Route>
+            <Route exact path="/q5"> <Q5 /> </Route>
+            <Route exact path="/q6"> <Q6 /> </Route>
+            <Route exact path="/q7"> <Q7 /> </Route>
+            {/*
+            • using 'component' syntax below to allow for prop transfer b/w components during routing
+            • use for components whose nav requires props passed during routing
+            • idk why but props do not properly transfer w/out this component syntax
+            */}
+            <Route exact path="/qual-expnc" component={QualExpnc}></Route>
+            <Route exact path="/dnqual-expnc" component={DNQualExpnc}></Route>
+            <Route exact path="/dnqual-nd" component={DNQualND}></Route>
+            <Route exact path="/q2-branch" component={Q2Branch}></Route>
+            <Route exact path="/q4-branch" component={Q4Branch}></Route>
+            <Route exact path="/q5-branch" component={Q5Branch}></Route>
+            <Route exact path="/q5-qual1" component={Q5Qual1}></Route>
+            <Route exact path="/q5-qual2" component={Q5Qual2}></Route>
+            <Route exact path="/q5-qual3" component={Q5Qual3}></Route>
+            <Route exact path="/q6-branch" component={Q6Branch}></Route>
+            <Route exact path="/q6-qual1" component={Q6Qual1}></Route>
+            <Route exact path="/q6-qual2" component={Q6Qual2}></Route>
+            <Route exact path="/q6-qual3" component={Q6Qual3}></Route>
+            <Route exact path="/q7-branch" component={Q7Branch}></Route>
+            <Route exact path="/q7-qual1" component={Q7Qual1}></Route>
+            <Route exact path="/q7-qual2" component={Q7Qual2}></Route>
+          </Switch>
+        </Main>
+      </Wrapper>
     );
   }
 }

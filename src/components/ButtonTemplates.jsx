@@ -31,7 +31,7 @@ export const YNQuestion = ({yPath, nPath, currentPath, backPath, yButtonText, nB
     </ButtonWrapper>
     <ButtonWrapper>
       <Button state={a2} onClick={() => onClick('no')}>{nButtonText || 'No'}</Button>
-    </ButtonWrapper>
+    </ButtonWrapper><br></br>
     <ButtonWrapper>
       <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
     </ButtonWrapper>
