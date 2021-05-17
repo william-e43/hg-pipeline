@@ -3,12 +3,14 @@ import {Q1, Q2, Q3, Q4, Q5, Q6, Q7} from "./Questions.jsx";
 import {QualExpnc, DNQualExpnc, DNQualND, Q5Qual1, Q5Qual2, Q5Qual3, Q6Qual1, Q6Qual2, Q6Qual3, Q7Qual1, Q7Qual2} from "./EndCases.jsx";
 import {Q2Branch, Q4Branch, Q5Branch, Q6Branch, Q7Branch} from "./PipelineBranches.jsx";
 import Home from "./Home.jsx";
+import ListModal from './ListModal.jsx';
 import { Switch, Route} from "react-router-dom";
 import styled from 'styled-components';
 
 const Main = styled.div`
   color: #393A3D;
   margin-left: 20px;
+  grid-area: 3 / 1 / span 3 / span 8;
 `
 const Header = styled.div`
   background-image: linear-gradient(180deg, rgba(255,255,255,0) 60%, #00132d 100%),
@@ -17,13 +19,16 @@ const Header = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  height: 500px;
-  max-height: 100%;
+  height: 400px;
+  max-height: 400px;
   width: auto;
+  grid-area: 1 / 1 / span 2 / span 10;
 `
 const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: 40% 60%;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(10, 0.5fr);
+
 `
 const Logo = styled.div`
   background-image: url('../media/logo.png');
@@ -76,6 +81,7 @@ class App extends React.Component {
             <Route exact path="/q7-qual2" component={Q7Qual2}></Route>
           </Switch>
         </Main>
+        <ListModal />
       </Wrapper>
     );
   }
