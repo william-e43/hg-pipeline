@@ -17,16 +17,17 @@ const Header = styled.div`
   linear-gradient(0deg, rgba(255,255,255,0) 60%, #00132d 90%),
   url('../media/banner.jpg');
   background-repeat: no-repeat;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
   background-size: cover;
   overflow: hidden;
-  height: 400px;
-  max-height: 400px;
+  height: 350px;
+  max-height: 350px;
   width: auto;
   grid-area: 1 / 1 / span 2 / span 10;
 `
 const Wrapper = styled.div`
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(10, auto);
   grid-template-columns: repeat(10, 0.5fr);
 
 `

@@ -65,13 +65,13 @@ export const ModalWrapper = styled.div`
 export const Modal = styled.div`
   width: 30vw;
   height: 100%;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3);
   border: 2px;
   animation-name: animatetop;
   animation-duration: 1.4s;
   margin-left: 25px;
   transition: 1s;
-  display: ${props => props.show ? 'inline' : 'none'};
+  display: ${props => props.show ? 'flex' : 'none'};
   justify-content: start;
   align-items: start;
 `

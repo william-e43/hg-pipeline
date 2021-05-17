@@ -12,11 +12,11 @@ const ListModal = (props) => {
       </ModalButton>
       <Modal show={show}>
         <div style={{marginLeft: '5vw'}}>
-          <h3>FAQs</h3>
+          <h2>FAQs & Video</h2>
           <ul>
-            <li>FAQ 1</li>
-            <li>FAQ 2</li>
-            <li>FAQ 3</li>
+            <li>This is the first FAQ</li>
+            <li>This is the second FAQ</li>
+            <li>This is the third FAQ</li>
           </ul>
         </div>
       </Modal>
