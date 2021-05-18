@@ -53,7 +53,7 @@ export const ModalButton = styled.button`
   transition: 1s;
 `
 export const ModalWrapper = styled.div`
-  height: auto;
+  height: 100vh;
   width: auto;
   display: flex;
   justify-content: start;
