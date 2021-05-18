@@ -20,7 +20,8 @@ text-decoration: inherit;
 color: inherit;
 `
 export const Button = styled.button`
-  height: 112.5px;
+  min-height: 112.5px;
+  height: auto;
   width: 120px;
   border-radius: 12px;
   border: 12px;
@@ -55,7 +56,7 @@ export const ModalWrapper = styled.div`
   height: auto;
   width: auto;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   grid-area:  3 / 10 / span 10 / span 1;
   &:click ${ModalButton} {

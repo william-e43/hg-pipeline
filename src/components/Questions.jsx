@@ -24,7 +24,7 @@ let Q1 =(props) => {
           <li>Violations of a penal ordinance of a political subdivision</li>
           </ul>
         </li><br></br>
-        <li>Case dismissed through:
+        <li>Or, was your case dismissed through:
           <ul>
           <li>Teen Court</li>
           <li>Class C misdemeanor ending in successful completion of deferred adjudication</li>

@@ -64,7 +64,7 @@ const Q5Qual1 = (props) => {
       <h3>Your case involved driving or boating while intoxicated so you may be eligible for a non-disclosure so long as:</h3>
       <ul>
         <li>You have no prior convictions or deferred adjudications</li>
-        <li>The case you are trying to get sealed is not on the “Big Naughty List”</li>
+        <li>The case you are trying to get sealed is not on the Prohibited Case List</li>
         <li>Your BAC was not listed in the deferred judgment as being above .15</li>
         <li>You were not involved in an accident that included another person in your car or otherwise</li>
         <li>Your wait period will be two years from the date of discharge</li>
@@ -85,7 +85,7 @@ const Q5Qual2 = (props) => {
       <h2>Q5 Qual 2</h2>
       <h3>Your case was a misdemeanor and you were discharged after September 1, 2017 so you may be eligible for a non-disclosure so long as</h3>
       <ul>
-        <li>The case you are trying to get sealed is not on the list of prohibited cases</li>
+        <li>The case you are trying to get sealed is not on the Prohibited Case List</li>
         <li>Your wait period will be 180 days after the date you were sentenced</li>
       </ul>
       <MainNavButtons props={propsObj}/>
@@ -105,11 +105,11 @@ const Q5Qual3 = (props) => {
       <h2>Q5 Qual 3</h2>
       <h3>Your case was a felony so you may be eligible for a non-disclosure so long as</h3>
       <ul>
-        <li>The case you are trying to get sealed is not on “Big Naughty List”</li>
+        <li>The case you are trying to get sealed is not on the “Prohibited Case List”</li>
         <li>Your wait period will be
           <ul>
             <li>Five years from your discharge if the case was a felony</li>
-            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code as 20, 21, 22, 25, 42, 43, or 46</li>
+            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code under sections 20, 21, 22, 25, 42, 43, or 46 (see prohibited case list)</li>
             <li>Immediately if the above does not apply</li>
           </ul></li>
       </ul>
@@ -127,10 +127,10 @@ const Q6Qual1 = (props) => {
   return(
     <div>
       <h2>Q6 Qual 1</h2>
-      <h3>Your case involved misdemeanor driving while intoxicated so you may be eligible for an expunction so long as</h3>
+      <h3>Your case involved misdemeanor driving while intoxicated so you may be eligible for a non-disclousre so long as</h3>
       <ul>
         <li>You have no prior convictions or deferred adjudications</li>
-        <li>Your BAC was not listed in the deferred adjudication judgment as being above .15</li>
+        <li>Your BAC was not listed in the judgment as being above .15</li>
         <li>You were not involved in an accident that included another person in your car or otherwise</li>
         <li>Your wait period will be:
           <ul>
@@ -157,10 +157,10 @@ const Q6Qual2 = (props) => {
       <h3>Your case was a misdemeanor other than a DWI so you may be eligible for a non-disclosure so long as</h3>
       <ul>
         <li>You have no prior convictions or deferred adjudications</li>
-        <li>The case you are trying to get sealed is not on the “Big Naughty List”</li>
+        <li>The case you are trying to get sealed is not on the “Prohibited Case List”</li>
         <li>Your wait period will be:
           <ul>
-            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code as 20, 21, 22, 25, 42, 43, or 46</li>
+            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code under sections 20, 21, 22, 25, 42, 43, or 46 (see prohibited case list)</li>
             <li>Immediately if the above does not apply</li>
           </ul>
         </li>
@@ -202,7 +202,7 @@ const Q7Qual1 = (props) => {
       <h3>Your case involved misdemeanor driving while intoxicated so you may be eligible for a non-disclosure so long as:</h3>
       <ul>
         <li>You have no prior convictions or deferred adjudications</li>
-        <li>Your BAC was not listed in the deferred judgment as being above .15</li>
+        <li>Your BAC was not listed in the judgment as being above .15</li>
         <li>You were not involved in an accident that included another person in your car or otherwise</li>
         <li> Your wait period will be:
           <ul>
@@ -228,11 +228,11 @@ const Q7Qual2 = (props) => {
       <h3>Your case involved a misdemeanor other than a DWI, so you may be eligible for a non-disclosure so long as:</h3>
       <ul>
         <li>You have no prior convictions or deferred adjudications</li>
-        <li>The case you are trying to get sealed is not on the “Big Naughty List”</li>
+        <li>The case you are trying to get sealed is not on the “Prohibited Case List”</li>
         <li>Offense for which order is sought was not violent or sexual in nature with the exception of an offense under penal code 22.01</li>
         <li>Your wait period will be:
           <ul>
-            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code as 20, 21, 22, 25, 42, 43, or 46</li>
+            <li>Two years from your discharge if the case was covered by any offense labeled by the penal code under sections 20, 21, 22, 25, 42, 43, or 46 (see prohibited case list)</li>
             <li>Immediately if the above does not apply</li>
           </ul>
         </li>
