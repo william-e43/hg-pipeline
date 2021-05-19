@@ -10,7 +10,7 @@ const Q2Branch = (props) => {
   }
   return(
     <div>
-      <h2>You do not qualify for an expunction, keep going to see if you qualify for a non-disclosure</h2>
+      <h2>You do not qualify for an expunction, <b>keep going to see if you qualify for a non-disclosure</b></h2>
       <MainNavButtons props={propsObj} />
     </div>
   );
@@ -19,8 +19,7 @@ const Q2Branch = (props) => {
 const Q4Branch = (props) => {
   return(
     <div>
-      <h1>Q4 Warning Branch</h1>
-      <p>“Keep going but there may be a problem if you received another conviction or deferred adjudication during any applicable wait period that followed the completion of your sentence.  As you move through each question, take note of the wait periods and this question.  If you received another conviction or deferred adjudication during that wait period then you will know you do not qualify for a non-disclosure and can stop the qualifier ”</p>
+      <p>Keep going but there may be a problem if you received another conviction or deferred adjudication during any applicable wait period that followed the completion of your sentence.  As you move through each question, take note of the wait periods and this question.  If you received another conviction or deferred adjudication during that wait period then you will know you do not qualify for a non-disclosure and can stop the qualifier</p>
       <ButtonWrapper>
         <StyledLink to="/q4"><SubmitButton>Back</SubmitButton></StyledLink>
       </ButtonWrapper>
@@ -45,7 +44,6 @@ const Q5Branch = (props) => {
 
   return(
     <div>
-      <h1>Red Pipeline</h1>
       <h1>There are three ways you might qualify for a non-disclosure.</h1>
       <h2>Choose the option that applies to you</h2>
       <ThreeWayQuestion props={propsObj}/>
@@ -68,7 +66,6 @@ const Q6Branch = (props) => {
 
   return(
     <div>
-      <h1>Blue Pipeline</h1>
       <h1>There are three ways you might qualify for a non-disclosure.</h1>
       <h2>Choose the option that applies to you</h2>
       <ThreeWayQuestion props={propsObj}/>
@@ -83,7 +80,6 @@ const Q7Branch = (props) => {
 
   return(
     <div>
-      <h1>Green Pipeline</h1>
       <h1>There are two ways you might qualify for a non-disclosure.</h1>
       <h2>Choose the option that applies to you</h2>
       <YNQuestion yPath="/q7-qual1" nPath="/q7-qual2" currentPath="/q7-branch" backPath="/q7" yButtonText={yText} nButtonText={nText}/>

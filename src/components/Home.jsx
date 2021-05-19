@@ -7,8 +7,8 @@ const Home = (props) => {
     <div>
       <h1>Record Clearing Qualifier</h1>
         <h2>Welcome to the Record Clearing Qualifier</h2>
-        <p>Whether you qualify for an expunction or non-disclousre is an important question to answer. We've developed this two-step process to help you answer it. The process begins with an analysis by our qualifier of whether you are eligible for an expunction and if not then the qualifier will help you analyze whther you are likely eligbile for a non-disclosure.</p>
-        <p>Please note that <b>the analysis of the qualifier does not constitute legal advice or a legal opinion.</b> Many cases will involve considerations beyond the scope of the qualifier; however, the qualifier will help you to answer <b>whether you should investigate furrther into seeking to clear your record.</b></p>
+        <p>Whether you qualify for an expunction or non-disclousre is an important question to answer. We've developed this two-step process to help you answer it. The process begins with an analysis by our qualifier of whether you are eligible for an expunction and if not then the qualifier will help you analyze whether you are likely eligbile for a non-disclosure.</p>
+        <p>Please note that <b>the analysis of the qualifier does not constitute legal advice or a legal opinion.</b> Many cases will involve considerations beyond the scope of the qualifier; however, the qualifier will help you to answer <b>whether you should investigate further into seeking to clear your record.</b></p>
         <p>Here are the steps: </p>
         <div>
           <h2>Step 1: Gather your paperwork <b>for every offense connected to your arrest.</b> This will include: </h2>

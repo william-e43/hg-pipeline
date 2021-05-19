@@ -104,7 +104,7 @@ export const MainNavButtons = (props) => {
         <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
       </ButtonWrapper>
       <ButtonWrapper>
-        <StyledLink to={nextPath || '/'}><SubmitButton>{nextPath ? 'Next' : 'Home'}</SubmitButton></StyledLink>
+        <StyledLink to={nextPath || '/home'}><SubmitButton>{nextPath ? 'Next' : 'Home'}</SubmitButton></StyledLink>
       </ButtonWrapper>
     </div>
   )

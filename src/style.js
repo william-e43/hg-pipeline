@@ -27,7 +27,7 @@ export const Button = styled.button`
   border: 12px;
   font-size: 16px;
   font-weight: 700;
-  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
   transition: box-shadow 0.3s ease-in-out;
   margin: 20px;
   cursor: pointer;
@@ -53,12 +53,12 @@ export const ModalButton = styled.button`
   transition: 1s;
 `
 export const ModalWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   width: auto;
   display: flex;
   justify-content: start;
   align-items: start;
-  grid-area:  3 / 10 / span 10 / span 1;
+  grid-area:  3 / 10 / span 20 / span 1;
   &:click ${ModalButton} {
     transform: rotate(180deg);
   }

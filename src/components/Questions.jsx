@@ -5,8 +5,7 @@ let Q1 =(props) => {
 
   return(
     <div>
-      <h1>Question 1</h1>
-      <h2>Were you charged/ticketed as a minor for any of the following?</h2>
+      <h1>Were you charged/ticketed as a minor for any of the following?</h1>
       <ul>
         <li>One or more convictions for possession, purchase, consumption, or receipt of cigarettes or tobacco products.</li><br></br>
         <li>No more than one conviction of:
@@ -31,7 +30,7 @@ let Q1 =(props) => {
           </ul>
         </li>
       </ul>
-    <YNQuestion yPath="qual-expnc" nPath="/q2" currentPath="/q1" backPath="/"/>
+    <YNQuestion yPath="qual-expnc" nPath="/q2" currentPath="/q1" backPath="/home"/>
     </div>
   )
 }
@@ -40,8 +39,7 @@ let Q2 = (props) => {
 
   return(
     <div>
-      <h1>Question 2</h1>
-      <h2>Is it true that every charge arising from your arrest ended in one of the following ways?</h2>
+      <h1>Is it true that every charge arising from your arrest ended in one of the following ways?</h1>
       <ul>
         <li>Acquittal at trial or after appeal</li>
         <li>Pardoned</li>
@@ -61,8 +59,7 @@ let Q3 = (props) => {
 
   return(
     <div>
-      <h1>Question 3</h1>
-      <h2>Did your charge require you to register as a sex offender, involve family violence, or was it one of the following : </h2>
+      <h1>Did your charge require you to register as a sex offender, involve family violence, or was it one of the following :</h1>
       <ul>
         <li>Murder</li>
         <li>Stalking</li>
@@ -83,8 +80,7 @@ let Q3 = (props) => {
 let Q4 = (props) => {
   return(
     <div>
-      <h1>Question 4</h1>
-      <h2>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h2>
+      <h1>Did you receive another conviction or deferred adjudication at any time between your sentence and within five years of the completion of your sentence?</h1>
       <YNQuestion yPath="/q4-branch" nPath="/q5" currentPath="/q4" backPath="/q3"/>
     </div>
   )
@@ -93,8 +89,7 @@ let Q4 = (props) => {
 let Q5 = (props) => {
   return(
     <div>
-      <h1>Question 5</h1>
-      <h2>Was you case disposed of with the successful completion of a deferred adjudication?</h2>
+      <h1>Was you case disposed of with the successful completion of a deferred adjudication?</h1>
       <YNQuestion yPath="/q5-branch" nPath="/q6" currentPath="/q5" backPath="/q4"/>
     </div>
   )
@@ -104,8 +99,7 @@ let Q6 = (props) => {
 
   return(
     <div>
-      <h1>Question 6</h1>
-      <h2>Was your case disposed of with the successful completion of probation?</h2>
+      <h1>Was your case disposed of with the successful completion of probation?</h1>
       <YNQuestion yPath="/q6-branch" nPath="/q7" currentPath="/q6" backPath="/q5"/>
     </div>
   )
@@ -115,8 +109,7 @@ let Q7 = (props) => {
 
   return(
     <div>
-      <h1>Question 7</h1>
-      <h2>Was your case disposed of by the completion of time in jail?</h2>
+      <h1>Was your case disposed of by the completion of time in jail?</h1>
       <YNQuestion yPath="/q7-branch" nPath="/dnqual-nd" currentPath="/q7" backPath="/q6"/>
     </div>
   )
