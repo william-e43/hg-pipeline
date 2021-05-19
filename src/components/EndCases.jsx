@@ -34,7 +34,7 @@ const DNQualNextSteps = (props) => {
       <p>
       If you would like a consult with an attorney to review all of this, the next step is to get signed up for the process.  To take this step, please schedule a Double Check Consultation. At the consultation we’ll provide you a link to upload the documents you have gathered, and a time to meet with an attorney to confirm your eligibility, and answer questions about your situation.  We’ll spend up to an hour discussing your situation.  Our normal hourly rate is $400.  For your situation we have discounted this rate to $250.  This will include the time to review your materials and verify your eligibility and meet for your consult.  Should we be able to help you move forward, the $250 will be applied to your fees for that legal work.
       </p>
-      <a href="https://myattorneybaron.as.me/doublecheckconsult" target="_blank" rel="noopener noreferrer">
+      <a href="https://myattorney.as.me/doublecheckconsult" target="_blank" rel="noopener noreferrer">
         <ButtonWrapper>
           <Button >Schedule a consultation</Button>
         </ButtonWrapper>
