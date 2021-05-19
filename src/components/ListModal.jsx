@@ -36,7 +36,7 @@ const FAQ1 = {
       <li>What you were charged with.  This can be found on a ticket (if that is all you have) or on an information or indictment from your case.
       </li><br></br>
       <li>When you were arrested.  This also can generally be found on a ticket or on an information or indictment unless the date of the arrest and the date of the offense are different.  If the dates are different then you can find this on your jail record.</li><br></br>
-      <li> The resolution of your case.  If you go to trial and won at court or after an appeal, this would be your acquittal.  If you took a pre-trial diversion, this would be the pre-trial diversion agreement, if you took a deal this would most likely be a Judgment.</li><br></br>
+      <li> The resolution of your case.  If you went to trial and won meaning a Judge or jury found you not guilty or after an appeal, this would be your acquittal.  If you took a pre-trial diversion, this would be the pre-trial diversion agreement, if you took a deal this would most likely be a Judgment.</li><br></br>
       <li>The final outcome of your case.  If you completed deferred adjudication probation or other terms this would be a dismissal.  If you completed straight probation or a jail term this would be a discharge.  If you were on probation and then were adjudicated guilty or had your probation revoked then there will be an order stating that fact.
       </li><br></br>
       <li> Other important information: Ask for your “TRN” number. </li>
