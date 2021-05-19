@@ -19,7 +19,8 @@
   },
   "scripts": {
     "reactStart": "react-scripts start",
-    "start": "nodemon server",
+    "start": "node server",
+    "startDev": "nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

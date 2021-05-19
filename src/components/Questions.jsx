@@ -68,7 +68,7 @@ let Q3 = (props) => {
         <li>Aggravated Kidnapping</li>
         <li>Continuous trafficking</li>
         <li>Injury to a child or elederly</li>
-        <li>Abandonment of endangerment of a child</li>
+        <li>Abandonment or endangerment of a child</li>
         <li>Violation of a court or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking, or trafficking</li>
         <li>Repeated violation of a court order or bond in cases involving family violence, child abuse or neglect, sexual assault, stalking or trafficking</li>
       </ul>
