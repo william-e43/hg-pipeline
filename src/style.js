@@ -65,6 +65,7 @@ export const ModalWrapper = styled.div`
 `
 export const Modal = styled.div`
   width: 30vw;
+  min-height: 100vh;
   height: 100%;
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3);
   border: 2px;
@@ -73,8 +74,18 @@ export const Modal = styled.div`
   margin-left: 25px;
   transition: 1s;
   display: ${props => props.show ? 'flex' : 'none'};
+  flex-direction: column;
   justify-content: start;
   align-items: start;
+`
+export const Answer = styled.div`
+  display: ${props => props.show ? 'block' : 'none'}
+`
+export const FAQWrapper = styled.div`
+  border-top: 1px solid black;
+  margin-top: 15px;
+  height: auto;
+  width 100%;
 `
 export const closeModalIcon = <svg style= {{height: '45px', width: '45px'}} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />

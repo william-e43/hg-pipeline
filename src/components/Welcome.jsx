@@ -11,7 +11,7 @@ const Welcome = (props) => {
       <div>
         <h3>Keep It Simple Option</h3>
         <p>Say the word and we’ll gather your documents, analyze your case, and explain the results in a written report for a fee of $250, and if eligible, the $250 will be applied to the fee for the legal work needed to clear your record. </p>
-        <a href="https://myattorneybaron.as.me/?appointmentType=23070115" target="_blank" rel="noopener noreferrer">
+        <a href="https://myattorney.as.me/keepitsimpleoption" target="_blank" rel="noopener noreferrer">
           <ButtonWrapper>
             <Button >Book an appointment</Button>
           </ButtonWrapper>
