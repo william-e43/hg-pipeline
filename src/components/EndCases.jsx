@@ -7,6 +7,18 @@ import {Button, ButtonWrapper} from '../style';
   (i.e. when the user either qualifies or is disqualified one of these components is rendered)
 */
 
+const ExpncBook = (props) => {
+  return (
+    <div>
+      <a href="https://drive.google.com/file/d/1XgdfIXt5ktGcgm8-TQU96euYk8fUd0Fy/view" target="_blank" rel="noopener noreferrer">
+        <ButtonWrapper>
+          <Button>Click for the free HG Expunction Book</Button>
+        </ButtonWrapper>
+      </a>
+    </div>
+  )
+}
+
 const QualNextSteps = (props) => {
   return (
     <div>
@@ -18,6 +30,7 @@ const QualNextSteps = (props) => {
           <Button >Schedule a consultation</Button>
         </ButtonWrapper>
       </a>
+      <ExpncBook />
     </div>
   )
 }
