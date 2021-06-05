@@ -13,7 +13,7 @@ const QualNextSteps = (props) => {
       <p>
       The next step is to schedule a consultation to confirm your eligibility and get signed up for the process.  To take this step, please schedule a consultation. At the consultation we’ll provide you a link to upload the documents you have gathered, a link to confidentially provide the personal information required to be entered on your petition, and a time to meet with your attorney to confirm your eligibility, answer questions, arrange for payment, (a combination of legal and filing fees), and review the timing and procedures that will take place in your case.  The legal fees are $1,775.00 and the filing fees will vary depending on the type of petition we will draft and the county of filing.  The typical range for filing fees is $365 to $575.
       </p>
-      <a href="https://myattorneybaron.as.me/clearmyrecord" target="_blank" rel="noopener noreferrer">
+      <a href="https://myattorney.as.me/clearmyrecord " target="_blank" rel="noopener noreferrer">
         <ButtonWrapper>
           <Button >Schedule a consultation</Button>
         </ButtonWrapper>
