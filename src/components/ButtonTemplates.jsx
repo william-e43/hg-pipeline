@@ -27,17 +27,21 @@ export const YNQuestion = ({yPath, nPath, currentPath, backPath, yButtonText, nB
   return (
   <div>
     <ButtonWrapper>
-      <Button state={a1} onClick={() => onClick('yes')}>{yButtonText || 'Yes'}</Button>
+      <StyledLink to={{pathname: yPath, state: {from: currentPath}}}>
+        <Button state={a1} onClick={() => onClick('yes')}>{yButtonText || 'Yes'}</Button>
+      </StyledLink>
     </ButtonWrapper>
     <ButtonWrapper>
-      <Button state={a2} onClick={() => onClick('no')}>{nButtonText || 'No'}</Button>
+      <StyledLink to={{pathname: nPath, state: {from: currentPath}}}>
+        <Button state={a2} onClick={() => onClick('no')}>{nButtonText || 'No'}</Button>
+      </StyledLink>
     </ButtonWrapper><br></br>
     <ButtonWrapper>
       <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
     </ButtonWrapper>
-    <ButtonWrapper>
+    {/* <ButtonWrapper>
       <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
-    </ButtonWrapper>
+    </ButtonWrapper> */}
   </div>
   )
 }
@@ -95,6 +99,8 @@ export const ThreeWayQuestion = (props) => {
   )
 }
 
+
+//Used in end cases and PipeLine Branches
 export const MainNavButtons = (props) => {
   const {backPath, nextPath} = props.props;
 
