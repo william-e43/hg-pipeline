@@ -4,8 +4,7 @@ import {Button, StyledLink, ButtonWrapper} from '../style';
 const Welcome = (props) => {
   return(
     <div>
-      <p>Welcome to the first step on the road to gaining the freedom of a clean record!  We are here to help and offer several pathways for you to choose from in this important work.  No matter which pathway you choose, you are in the right place.  We will be there every step of the way.</p>
-      <p><b>The journey begins with the gathering of your record.</b> This is followed by an analysis of your record against the legal requirements for clearing your record via either an expunction or a non-disclosure.  If neither of these prove to be options then the next step will be to consider seeking a pardon.</p>
+      <p>Welcome to the first step on the road to gaining the freedom of a clean record!  We are here to help and offer several pathways for you to choose from in this important work.  No matter which path you choose, you are in the right place.  We will be there every step of the way.</p>
       <p>We’ve designed the process of taking this journey to fit <i>your</i> budget.  You choose how many of the preliminary steps you want us to do for you knowing that, <b>should you be eligible to get your record cleared, the fees you paid will be applied against the fee for seeking to clear your record.</b> </p>
       <h3><b>Here are the plans: </b></h3>
       <div>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import FAQ from './FAQ.jsx';
+import PCL from './Pcl.jsx';
 import {ModalWrapper, ModalButton, Modal, openModalIcon, closeModalIcon} from '../style.js';
 
 const ListModal = (props) => {
@@ -21,6 +22,7 @@ const ListModal = (props) => {
           <FAQ q={FAQ6}/>
           <FAQ q={FAQ7}/>
           <FAQ q={FAQ8}/>
+          <PCL />
       </Modal>
     </ModalWrapper>
   )
