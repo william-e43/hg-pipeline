@@ -42,9 +42,9 @@ export const YNQuestion = ({yPath, nPath, currentPath, backPath, yButtonText, nB
     <ButtonWrapper>
       <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
     </ButtonWrapper>
-    {/* <ButtonWrapper>
-      <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
-    </ButtonWrapper> */}
+    <ButtonWrapper>
+      <StyledLink to={'/home'}><SubmitButton>Home</SubmitButton></StyledLink>
+    </ButtonWrapper>
   </div>
   )
 }
@@ -101,9 +101,9 @@ export const ThreeWayQuestion = (props) => {
       <ButtonWrapper>
         <StyledLink to={backPath}><SubmitButton>Back</SubmitButton></StyledLink>
       </ButtonWrapper>
-      {/* <ButtonWrapper>
-        <StyledLink to={path}><SubmitButton>Next</SubmitButton></StyledLink>
-      </ButtonWrapper> */}
+      <ButtonWrapper>
+        <StyledLink to={'/home'}><SubmitButton>Home</SubmitButton></StyledLink>
+      </ButtonWrapper>
     </div>
   )
 }

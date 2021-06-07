@@ -91,7 +91,7 @@ const FAQ7 = {
       <ul>
         <li>Those from a "dating relationship" defined as a relationship between individuals who have or have had a continuing relationship of a romantic or intimate nature.</li>
         <li>Family relationships including individuals related by consanguinity or affinity, as determined under Sections 573.022 (descendant, common ancestor or adopted) and 573.024 (married or related to a spouse), Government Code, individuals who are former spouses of each other, individuals who are the parents of the same child, without regard to marriage, and a foster child and foster parent, without regard to whether those individuals reside together.</li>
-        <li>Roommates defined as members of a "Household" which means a unit composed of persons living together in the same dwelling, without regard to whether they are related to each other.  "Member of a household" includes a person who previously lived in a household.</li>
+        <li>Roommates are defined as members of a "Household" which means a unit composed of persons living together in the same dwelling, without regard to whether they are related to each other.  "Member of a household" includes a person who previously lived in a household.</li>
       </ul>
     </div>
 }
