@@ -3,7 +3,6 @@ import React from 'react';
 const PCL = (props) => {
   return (
     <div>
-      <h3>Prohibited Case List</h3>
       <ul>
         <li><h3>20</h3>
           <ul>

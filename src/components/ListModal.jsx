@@ -1,28 +1,30 @@
-import React, {useState} from 'react';
+import React from 'react';
 import FAQ from './FAQ.jsx';
 import PCL from './Pcl.jsx';
-import {ModalWrapper, ModalButton, Modal, openModalIcon, closeModalIcon} from '../style.js';
+import Glossary from './Glossary.jsx';
+import {ModalWrapper, Modal} from '../style.js';
 
 const ListModal = (props) => {
-  const [show, setShow] = useState(true);
-  const icon = show ? closeModalIcon : openModalIcon
+  //const [show, setShow] = useState(true);
+  //const icon = show ? closeModalIcon : openModalIcon
   return (
     <ModalWrapper>
-      <ModalButton
+      {/* <ModalButton
         show={show} onClick={() => setShow(!show)}>
         {icon}
-      </ModalButton>
-      <Modal show={show}>
+      </ModalButton> */}
+      <Modal show={true}>
           <h2 style={{marginLeft: '15px'}}>FAQ</h2>
+          <FAQ q={FAQPCL} />
+          <FAQ q={FAQGlossary} />
           <FAQ q={FAQ1}/>
           <FAQ q={FAQ2}/>
           <FAQ q={FAQ3}/>
+          <FAQ q={FAQ8}/>
           <FAQ q={FAQ4}/>
           <FAQ q={FAQ5}/>
           <FAQ q={FAQ6}/>
           <FAQ q={FAQ7}/>
-          <FAQ q={FAQ8}/>
-          <PCL />
       </Modal>
     </ModalWrapper>
   )
@@ -110,6 +112,16 @@ const FAQ8 = {
         </li>
       </ul>
     </div>
+}
+
+const FAQPCL = {
+  question: 'Prohibited Case List',
+  answer: <PCL />
+}
+
+const FAQGlossary = {
+  question: 'Glossary',
+  answer: <Glossary />
 }
 
 export default ListModal;
