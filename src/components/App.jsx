@@ -4,6 +4,7 @@ import {QualExpnc, DNQualExpnc, DNQualND, Q5Qual1, Q5Qual2, Q5Qual3, Q6Qual1, Q6
 import {Q2Branch, Q4Branch, Q5Branch, Q6Branch, Q7Branch} from "./PipelineBranches.jsx";
 import Home from "./Home.jsx";
 import Welcome from './Welcome.jsx';
+import PersonalForm from './PersonalForm.jsx';
 import ListModal from './ListModal.jsx';
 import { Switch, Route} from "react-router-dom";
 import styled from 'styled-components';
@@ -53,6 +54,7 @@ class App extends React.Component {
         <Main>
           <Switch>
             <Route exact path="/home"> <Home /> </Route>
+            <Route exact path = "/pForm"><PersonalForm /></Route>
             <Route exact path="/"><Welcome /></Route>
             <Route exact path="/q1"> <Q1 /> </Route>
             <Route exact path="/q2"> <Q2 /> </Route>

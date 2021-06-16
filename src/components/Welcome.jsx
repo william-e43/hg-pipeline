@@ -19,7 +19,7 @@ const Welcome = (props) => {
       <h3>Free Option</h3>
       <p>You gather the documents on your own and use our online Qualifier to analyze your situation.  While the Qualifier will not produce  a final legal opinion, it is going to address the most common obstacles to a clean record giving you the confidence to take the next step.</p>
       <ButtonWrapper>
-        <StyledLink to="/home"><Button>Start the Qualifier</Button></StyledLink>
+        <StyledLink to="/pForm"><Button>Start the Qualifier</Button></StyledLink>
       </ButtonWrapper>
     </div>
 
